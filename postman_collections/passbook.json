@@ -1,0 +1,155 @@
+{
+	"info": {
+		"name": "passbook",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{prod_url}}/api/user?userId=890f2839-866f-4524-9eac-bebe0d35d607",
+					"host": [
+						"{{prod_url}}"
+					],
+					"path": [
+						"api",
+						"user"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "890f2839-866f-4524-9eac-bebe0d35d607"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userId\": \"1247\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add assessment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": \"1246\",\n    \"competencyId\": 1,\n    \"competency\": \"NestJs\",\n    \"levelNumber\": 1,\n    \"type\": \"CBP\",\n    \"score\": \"80\",\n    \"certificateId\": \"cert-211\",\n    \"dateOfIssuance\": \"2021-12-1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/user/assessment",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"assessment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add feedback",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"dateOfSurveyScore\": \"2023-10-13\",\n    \"certificateId\": \"cert-001\",\n    \"overallScore\": 85,\n    \"competencies\": [\n        {\n            \"id\": 1,\n            \"name\": \"NestJs\",\n            \"levels\": [\n                {\n                    \"levelNumber\": 1,\n                    \"name\": \"Basic\",\n                    \"score\": \"90%\"\n                },\n                {\n                    \"levelNumber\": 2,\n                    \"name\": \"Intermediate\",\n                    \"score\": \"80%\"\n                },\n                {\n                    \"levelNumber\": 3,\n                    \"name\": \"Advanced\",\n                    \"score\": \"90%\"\n                }\n            ]\n        },\n        {\n            \"id\": 3,\n            \"name\": \"DB Modelling\",\n            \"levels\": [\n                {\n                    \"levelNumber\": 1,\n                    \"name\": \"Basic\",\n                    \"score\": \"90%\"\n                },\n                {\n                    \"levelNumber\": 2,\n                    \"name\": \"Intermediate\",\n                    \"score\": \"80%\"\n                },\n                {\n                    \"levelNumber\": 3,\n                    \"name\": \"Advanced\",\n                    \"score\": \"80%\"\n                }\n            ]\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Micro Architecture\",\n            \"levels\": [\n                {\n                    \"levelNumber\": 1,\n                    \"name\": \"Basic\",\n                    \"score\": \"90%\"\n                },\n                {\n                    \"levelNumber\": 2,\n                    \"name\": \"Intermediate\",\n                    \"score\": \"80%\"\n                }\n            ]\n        }\n    ],\n    \"userId\": \"1246\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/user/feedback",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"feedback"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://172.17.0.2:3001/",
+			"type": "string"
+		},
+		{
+			"key": "prod_url",
+			"value": "http://compass.samagra.io",
+			"type": "string"
+		}
+	]
+}

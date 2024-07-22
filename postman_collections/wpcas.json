@@ -1,0 +1,1609 @@
+{
+	"info": {
+		"name": "WPCAS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin Competency",
+			"item": [
+				{
+					"name": "sync-competency-data",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/admin-competency/sync-competency-data",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"admin-competency",
+								"sync-competency-data"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all admin competency",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{prod_url}}/api/admin-competency",
+							"host": [
+								"{{prod_url}}"
+							],
+							"path": [
+								"api",
+								"admin-competency"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all admin competency names",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/admin-competency/names",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"admin-competency",
+								"names"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get admin competency by competency id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/admin-competency/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"admin-competency",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete admin-competency by competency id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/admin-competency/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"admin-competency",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update admin-competency by competency id",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/admin-competency/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"admin-competency",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Survey Score",
+			"item": [
+				{
+					"name": "create new survey score",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"surveyFormId\": 3,\r\n  \"competencyId\": 1,\r\n  \"competencyLevelNumber\": 1,\r\n  \"score\": 20\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/survey-score",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"survey-score"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all survey score",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/survey-score",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"survey-score"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get survey score by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/survey-score/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"survey-score",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update survey score by id",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"score\": 50}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/survey-score/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"survey-score",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all surveys score for user by user id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/survey-score/all-survey-score/4d45a9e9-4a4d-4c92-aaea-7b5abbd6ff98",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"survey-score",
+								"all-survey-score",
+								"4d45a9e9-4a4d-4c92-aaea-7b5abbd6ff98"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get latest survey score for user by user id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/survey-score/latest-survey-score/4d45a9e9-4a4d-4c92-aaea-7b5abbd6ff98",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"survey-score",
+								"latest-survey-score",
+								"4d45a9e9-4a4d-4c92-aaea-7b5abbd6ff98"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get survey scores by survey Form Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/survey-score/survey-form/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"survey-score",
+								"survey-form",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "calculate survey score by survey form id",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"surveyFormId\": 3\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/survey-score/calculate-score",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"survey-score",
+								"calculate-score"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete survey score by id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/survey-score/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"survey-score",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Metadata",
+			"item": [
+				{
+					"name": "sync-user-metadata",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/user-metadata/sync-user-metadata",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"user-metadata",
+								"sync-user-metadata"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create or update user metadata by user id",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{prod_url}}/api/user-metadata/259e6004-5fd3-455f-976a-f64928e28b1a",
+							"host": [
+								"{{prod_url}}"
+							],
+							"path": [
+								"api",
+								"user-metadata",
+								"259e6004-5fd3-455f-976a-f64928e28b1a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all user metadata",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/user-metadata",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"user-metadata"
+							],
+							"query": [
+								{
+									"key": "isNewEmployee",
+									"value": "false",
+									"disabled": true
+								},
+								{
+									"key": "departmentId",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "designation",
+									"value": "CEO",
+									"disabled": true
+								},
+								{
+									"key": "isAdmin",
+									"value": "false",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "20",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "0",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user meta data by user id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{prod_url}}/api/user-metadata/890f2839-866f-4524-9eac-bebe0d35d607",
+							"host": [
+								"{{prod_url}}"
+							],
+							"path": [
+								"api",
+								"user-metadata",
+								"890f2839-866f-4524-9eac-bebe0d35d607"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user metadata by user id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/user-metadata/4d45a9e9-4a4d-4c92-aaea-7b5abbd6ff98",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"user-metadata",
+								"4d45a9e9-4a4d-4c92-aaea-7b5abbd6ff98"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get roles by userId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{prod_url}}/api/mockFracService/role/userId/890f2839-866f-4524-9eac-bebe0d35d607",
+							"host": [
+								"{{prod_url}}"
+							],
+							"path": [
+								"api",
+								"mockFracService",
+								"role",
+								"userId",
+								"890f2839-866f-4524-9eac-bebe0d35d607"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Question Bank",
+			"item": [
+				{
+					"name": "Create a question in question bank",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"competencyId\": 1,\r\n  \"question\": \"This is a first question\",\r\n  \"competencyLevelNumber\": 1\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/question-bank",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"question-bank"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create, Update and Delete Multiple Questions",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"createQuestions\": [\r\n        {\r\n            \"competencyId\": 1,\r\n            \"competencyLevelNumber\": 2,\r\n            \"question\": \"This is new dummy question #2\"\r\n        }\r\n    ],\r\n    \"updateQuestions\": [\r\n        {\r\n            \"questionId\": 24,\r\n            \"question\": \"This is updated dummy question #5\"\r\n        }\r\n    ],\r\n    \"deleteQuestions\": [\r\n        1\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/question-bank/updateMultipleQuestions",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"question-bank",
+								"updateMultipleQuestions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bulk upload questions in question bank",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"contentType": "application/pdf",
+									"type": "file",
+									"src": "/home/vamshi/Downloads/SurveyQuestions.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/question-bank/upload",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"question-bank",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all question from question bank",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{prod_url}}/api/question-bank",
+							"host": [
+								"{{prod_url}}"
+							],
+							"path": [
+								"api",
+								"question-bank"
+							],
+							"query": [
+								{
+									"key": "competencyId",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "competencyLevelNumber",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "orderBy",
+									"value": "createdAt",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update question by question id",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"question\": \"This is first question\"\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/question-bank/update/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"question-bank",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all the questions for a user in the survey form by user id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/question-bank/user/4d45a9e9-4a4d-4c92-aaea-7b5abbd6ff98",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"question-bank",
+								"user",
+								"4d45a9e9-4a4d-4c92-aaea-7b5abbd6ff98"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete the question by Id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4010/api/question-bank/delete/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4010",
+							"path": [
+								"api",
+								"question-bank",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "download template",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/question-bank/template",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"question-bank",
+								"template"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Survey Config",
+			"item": [
+				{
+					"name": "Create a survey config",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "surveyName",
+									"value": "New survey 1",
+									"type": "text"
+								},
+								{
+									"key": "startTime",
+									"value": "2024-04-17T10:22:56.644Z",
+									"type": "text"
+								},
+								{
+									"key": "endTime",
+									"value": "2024-05-17T10:22:56.644Z",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "onboardingTime",
+									"value": "3",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "onboardingTimeUnit",
+									"value": "MONTH",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/survey-config",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"survey-config"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Survey config",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/survey-config",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"survey-config"
+							],
+							"query": [
+								{
+									"key": "startTime",
+									"value": "2023-11-01T10:22:56.644Z",
+									"disabled": true
+								},
+								{
+									"key": "endTime",
+									"value": "2023-11-01T10:22:56.644Z",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "0",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete survey config by id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4010/api/survey-config/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4010",
+							"path": [
+								"api",
+								"survey-config",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update the survey config by Id",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "surveyName",
+									"value": "Updated Survey Name",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "startTime",
+									"value": "2023-12-15T10:22:56.644Z",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "endTime",
+									"value": "2024-01-15T10:22:56.644Z",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/vamshibatta/Downloads/surveySetupCSV.csv",
+									"disabled": true
+								},
+								{
+									"key": "onboardingTime",
+									"value": "3",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "onboardingTimeUnit",
+									"value": "MONTH",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "isActive",
+									"value": "true",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/survey-config/update/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"survey-config",
+								"update",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch sample userMapping data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/survey-config/user-mapping-sample",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"survey-config",
+								"user-mapping-sample"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Survey",
+			"item": [
+				{
+					"name": "Create Survey-Forms for a surveyConfig by configId",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/survey/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"survey",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get number of surveys to be filled by User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/survey/user-filled-survey/0f82ac61-9801-488f-babb-3c2d23a413d0",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"survey",
+								"user-filled-survey",
+								"0f82ac61-9801-488f-babb-3c2d23a413d0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch latest survey response by user Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/survey/latest-survey-response/0f82ac61-9801-488f-babb-3c2d23a413d0",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"survey",
+								"latest-survey-response",
+								"0f82ac61-9801-488f-babb-3c2d23a413d0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Home Screen Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/survey/home-screen",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"survey",
+								"home-screen"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Survey Form",
+			"item": [
+				{
+					"name": "Create a Survey-Form",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"4d45a9e9-4a4d-4c92-aaea-7b5abbd6ff98\",\r\n  \"status\": \"CREATED\",\r\n    \"questionsJson\": [\r\n        {\r\n            \"questionId\": 1,\r\n            \"question\": \"Is this First question?\"\r\n        },\r\n        {\r\n            \"questionId\": 3,\r\n            \"question\": \"Is this Second question?\"\r\n        },\r\n        {\r\n            \"questionId\": 4,\r\n            \"question\": \"Is this Fourth question?\"\r\n        }\r\n    ],\r\n    \"surveyCycleParameterId\": 2\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/survey-form",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"survey-form"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch a Survey-Form by Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/survey-form/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"survey-form",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update the Survey-Form by id",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"status\": \"PUBLISHED\"\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/survey-form/status/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"survey-form",
+								"status",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Survey-Form by Id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/survey-form/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"survey-form",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch latest survey form by user id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/survey-form/latest-survey-form/4d45a9e9-4a4d-4c92-aaea-7b5abbd6ff98",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"survey-form",
+								"latest-survey-form",
+								"4d45a9e9-4a4d-4c92-aaea-7b5abbd6ff98"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Response Tracker",
+			"item": [
+				{
+					"name": "create new response tracker",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"surveyFormId\": 3,\r\n  \"assesseeId\": \"4d45a9e9-4a4d-4c92-aaea-7b5abbd6ff98\",\r\n  \"assessorId\": \"abaa7220-5d2e-4e05-842a-95b2c4ce1876\",\r\n  \"responseJson\": [\r\n    {\r\n      \"questionId\": 1,\r\n      \"answer\": \"Yes\"\r\n    }, {\r\n      \"questionId\": 3,\r\n      \"answer\": \"No\"\r\n    }, {\r\n      \"questionId\": 4,\r\n      \"answer\": \"DoNotKnow\"\r\n    }\r\n  ],\r\n  \"status\": \"PENDING\"\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/response-tracker",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"response-tracker"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all response trackers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/response-tracker",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"response-tracker"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get response tracker by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/response-tracker/4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"response-tracker",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get response tracker by assessee Id and survey form id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/response-tracker/assessee/0f82ac61-9801-488f-babb-3c2d23a413d0/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"response-tracker",
+								"assessee",
+								"0f82ac61-9801-488f-babb-3c2d23a413d0",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get response tracker by assessor Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/response-tracker/assessor/0f82ac61-9801-488f-babb-3c2d23a413d0",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"response-tracker",
+								"assessor",
+								"0f82ac61-9801-488f-babb-3c2d23a413d0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get response trackers by survey-form Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/response-tracker/survey-form/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"response-tracker",
+								"survey-form",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete response tracker by Id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/response-tracker/4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"response-tracker",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update response tracker by surveyFormId, assesseeId and assessorId",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"surveyFormId\": 1,\r\n  \"assesseeId\": \"4d45a9e9-4a4d-4c92-aaea-7b5abbd6ff98\",\r\n  \"assessorId\": \"0f82ac61-9801-488f-babb-3c2d23a413d0\",\r\n  \"responseJson\": [\r\n    {\r\n      \"questionId\": 1,\r\n      \"answer\": \"Yes\"\r\n    },\r\n {\r\n      \"questionId\": 2,\r\n      \"answer\": \"No\"\r\n    },\r\n {\r\n      \"questionId\": 3,\r\n      \"answer\": \"DoNotKnow\"\r\n    }\r\n  ]\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/response-tracker",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"response-tracker"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mocks",
+			"item": [
+				{
+					"name": "Designation",
+					"item": [
+						{
+							"name": "addRoleToDesignation",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"roleId\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4010/api/mockFracService/designation/addRoleToDesignation/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4010",
+									"path": [
+										"api",
+										"mockFracService",
+										"designation",
+										"addRoleToDesignation",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:4010",
+			"type": "string"
+		},
+		{
+			"key": "prod_url",
+			"value": "https://wpcas.compass.io",
+			"type": "string"
+		}
+	]
+}

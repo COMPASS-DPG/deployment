@@ -1,0 +1,2207 @@
+{
+	"info": {
+		"name": "Marketplace",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Marketplace",
+			"item": [
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "View all consumers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MARKETPLACE_URI}}/api/admin/123e4567-e89b-42d3-a456-556642440020/consumers",
+									"host": [
+										"{{MARKETPLACE_URI}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"123e4567-e89b-42d3-a456-556642440020",
+										"consumers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Consumer Transactions",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MARKETPLACE_URI}}/api/admin/19b69e7a-23c7-49fb-bea7-ed6f883b156c/userWallets/transactions/123e4567-e89b-42d3-a456-556642440000",
+									"host": [
+										"{{MARKETPLACE_URI}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"19b69e7a-23c7-49fb-bea7-ed6f883b156c",
+										"userWallets",
+										"transactions",
+										"123e4567-e89b-42d3-a456-556642440000"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "View consumer details",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MARKETPLACE_URI}}/api/admin/19b69e7a-23c7-49fb-bea7-ed6f883b156c/consumers/123e4567-e89b-42d3-a456-556642440000",
+									"host": [
+										"{{MARKETPLACE_URI}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"19b69e7a-23c7-49fb-bea7-ed6f883b156c",
+										"consumers",
+										"123e4567-e89b-42d3-a456-556642440000"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit Consumer details",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"consumerId\": \"123e4567-e89b-42d3-a456-556642440004\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{MARKETPLACE_URI}}/api/admin/fd6670e6-23c6-4557-922a-840fc3c2c56c/consumers/123e4567-e89b-42d3-a456-556642440000",
+									"host": [
+										"{{MARKETPLACE_URI}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"fd6670e6-23c6-4557-922a-840fc3c2c56c",
+										"consumers",
+										"123e4567-e89b-42d3-a456-556642440000"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add credits to consumer",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"consumerId\": \"123e4567-e89b-42d3-a456-556642440000\",\n    \"credits\": 5000\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{MARKETPLACE_URI}}/api/admin/19b69e7a-23c7-49fb-bea7-ed6f883b156c/addCredits",
+									"host": [
+										"{{MARKETPLACE_URI}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"19b69e7a-23c7-49fb-bea7-ed6f883b156c",
+										"addCredits"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Reduce consumer credits",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"consumerId\": \"123e4567-e89b-42d3-a456-556642440001\",\n    \"credits\": 5\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{MARKETPLACE_URI}}/api/admin/19b69e7a-23c7-49fb-bea7-ed6f883b156c/reduceCredits",
+									"host": [
+										"{{MARKETPLACE_URI}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"19b69e7a-23c7-49fb-bea7-ed6f883b156c",
+										"reduceCredits"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all consumer wallets",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MARKETPLACE_URI}}/api/admin/fd6670e6-23c6-4557-922a-840fc3c2c56c/userWallets",
+									"host": [
+										"{{MARKETPLACE_URI}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"fd6670e6-23c6-4557-922a-840fc3c2c56c",
+										"userWallets"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Consumer",
+					"item": [
+						{
+							"name": "Consumer Sign Up",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"consumerId\": \"123e4567-e89b-42d3-a456-556642440001\",\n    \"name\": \"Sanchit Umesh\",\n    \"email\": \"sanchit@example.com\",\n    \"phoneNumber\": \"+919999999999\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{MARKETPLACE_URI}}/api/consumer/",
+									"host": [
+										"{{MARKETPLACE_URI}}"
+									],
+									"path": [
+										"api",
+										"consumer",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get account details",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MARKETPLACE_URI}}/api/consumer/4d45a9e9-4a4d-4c92-aaea-7b5abbd6ff98/",
+									"host": [
+										"{{MARKETPLACE_URI}}"
+									],
+									"path": [
+										"api",
+										"consumer",
+										"4d45a9e9-4a4d-4c92-aaea-7b5abbd6ff98",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Seach courses",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MARKETPLACE_URI}}/api/consumer/course/search?searchInput=Nest",
+									"host": [
+										"{{MARKETPLACE_URI}}"
+									],
+									"path": [
+										"api",
+										"consumer",
+										"course",
+										"search"
+									],
+									"query": [
+										{
+											"key": "searchInput",
+											"value": "Nest"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "View course information",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MARKETPLACE_URI}}/api/consumer/course/3",
+									"host": [
+										"{{MARKETPLACE_URI}}"
+									],
+									"path": [
+										"api",
+										"consumer",
+										"course",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Save a course",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"courseId\": \"123e4567-e89b-42d3-a456-556642440050\",\n    \"providerId\": \"123e4567-e89b-42d3-a456-556642440010\",\n    \"title\": \"Graphic Design Masterclass\",\n    \"description\": \"The Ultimate Graphic Design Course Which Covers Photoshop, Illustrator, InDesign, Design Theory, Branding & Logo Design\",\n    \"credits\": 25,\n    \"imageLink\": \"https://www.unite.ai/wp-content/uploads/2023/05/emily-bernal-v9vII5gV8Lw-unsplash.jpg\",\n    \"language\": [\n        \"en\"\n    ],\n    \"providerName\": \"Udemy\",\n    \"avgRating\": \"4\",\n    \"author\": \"Lindsay Marsh\",\n    \"competency\": {\n        \"API Development\": [\"Level1\", \"Level2\"],\n        \"Typescript\": [\"Level1\"],\n        \"Backend engineering\": [\"Level1\"]\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{MARKETPLACE_URI}}/api/consumer/4d45a9e9-4a4d-4c92-aaea-7b5abbd6ff98/course/save",
+									"host": [
+										"{{MARKETPLACE_URI}}"
+									],
+									"path": [
+										"api",
+										"consumer",
+										"4d45a9e9-4a4d-4c92-aaea-7b5abbd6ff98",
+										"course",
+										"save"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Unsave course",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"courseId\": \"123e4567-e89b-42d3-a456-556642440050\",\n    \"bppId\": \"abc.example.bpp.test_1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{MARKETPLACE_URI}}/api/consumer/123e4567-e89b-42d3-a456-556642440000/course/unsave",
+									"host": [
+										"{{MARKETPLACE_URI}}"
+									],
+									"path": [
+										"api",
+										"consumer",
+										"123e4567-e89b-42d3-a456-556642440000",
+										"course",
+										"unsave"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Unsave course",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{MARKETPLACE_URI}}/api/consumer/123e4567-e89b-42d3-a456-556642440000/course/1/unsave",
+											"host": [
+												"{{MARKETPLACE_URI}}"
+											],
+											"path": [
+												"api",
+												"consumer",
+												"123e4567-e89b-42d3-a456-556642440000",
+												"course",
+												"1",
+												"unsave"
+											]
+										}
+									},
+									"_postman_previewlanguage": "Text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "View saved courses",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MARKETPLACE_URI}}/api/consumer/4d45a9e9-4a4d-4c92-aaea-7b5abbd6ff98/course/saved",
+									"host": [
+										"{{MARKETPLACE_URI}}"
+									],
+									"path": [
+										"api",
+										"consumer",
+										"4d45a9e9-4a4d-4c92-aaea-7b5abbd6ff98",
+										"course",
+										"saved"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Check course save status",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"courseId\": \"123e4567-e89b-42d3-a456-556642440050\",\n    \"bppId\": \"abc.example.bpp.test_1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{MARKETPLACE_URI}}/api/consumer/123e4567-e89b-42d3-a456-556642440000/course/save/status",
+									"host": [
+										"{{MARKETPLACE_URI}}"
+									],
+									"path": [
+										"api",
+										"consumer",
+										"123e4567-e89b-42d3-a456-556642440000",
+										"course",
+										"save",
+										"status"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Purchase course",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"courseId\": \"123e4567-e89b-42d3-a456-556642440051\",\n    \"bppUri\": \"xyz\",\n    \"bppId\": \"compass.bpp.course_manager\",\n    \"title\": \"Graphic Design Masterclass\",\n    \"description\": \"The Ultimate Graphic Design Course Which Covers Photoshop, Illustrator, InDesign, Design Theory, Branding & Logo Design\",\n    \"credits\": 25,\n    \"imageLink\": \"https://www.unite.ai/wp-content/uploads/2023/05/emily-bernal-v9vII5gV8Lw-unsplash.jpg\",\n    \"language\": [\n        \"en\"\n    ],\n    \"providerName\": \"Udemy\",\n    \"avgRating\": \"4\",\n    \"providerId\": \"123e4567-e89b-42d3-a456-556642440099\",\n    \"author\": \"Lindsay Marsh\",\n    \"competency\": [{\n                \"id\": 1,\n                \"name\": \"API Development\",\n                \"levels\": [\n                    {\n                        \"id\": 1,\n                        \"levelNumber\": 1,\n                        \"name\": \"Basic\"\n                    }, {\n                        \"id\": 2,\n                        \"levelNumber\": 2,\n                        \"name\": \"Intermediate\"\n                    }, {\n                        \"id\": 3,\n                        \"levelNumber\": 3,\n                        \"name\": \"Advanced\"\n                    }\n                ]\n            }, {\n                \"id\": 2,\n                \"name\": \"Typescript\",\n                \"levels\": [\n                    {\n                        \"id\": 4,\n                        \"levelNumber\": 1,\n                        \"name\": \"Basic\"\n                    }, {\n                        \"id\": 5,\n                        \"levelNumber\": 2,\n                        \"name\": \"Intermediate\"\n                    }, {\n                        \"id\": 6,\n                        \"levelNumber\": 3,\n                        \"name\": \"Advanced\"\n                    }\n                ]\n            }, {\n                \"id\": 3,\n                \"name\": \"Backend engineering\",\n                \"levels\": [\n                    {\n                        \"id\": 7,\n                        \"levelNumber\": 1,\n                        \"name\": \"Basic\"\n                    }, {\n                        \"id\": 8,\n                        \"levelNumber\": 2,\n                        \"name\": \"Intermediate\"\n                    }, {\n                        \"id\": 9,\n                        \"levelNumber\": 3,\n                        \"name\": \"Advanced\"\n                    }\n                ]\n            }\n        ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{MARKETPLACE_URI}}/api/consumer/bbf1f7cf-4216-458e-8d98-0d9204ae57ef/course/purchase",
+									"host": [
+										"{{MARKETPLACE_URI}}"
+									],
+									"path": [
+										"api",
+										"consumer",
+										"bbf1f7cf-4216-458e-8d98-0d9204ae57ef",
+										"course",
+										"purchase"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Check course purchase status",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"courseId\": \"123e4567-e89b-42d3-a456-556642440050\",\n    \"bppId\": \"compass.bpp.course_manager\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{MARKETPLACE_URI}}/api/consumer/4d45a9e9-4a4d-4c92-aaea-7b5abbd6ff98/course/purchase/status",
+									"host": [
+										"{{MARKETPLACE_URI}}"
+									],
+									"path": [
+										"api",
+										"consumer",
+										"4d45a9e9-4a4d-4c92-aaea-7b5abbd6ff98",
+										"course",
+										"purchase",
+										"status"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "View course purchase history",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MARKETPLACE_URI}}/api/consumer/123e4567-e89b-42d3-a456-556642440000/course/purchases",
+									"host": [
+										"{{MARKETPLACE_URI}}"
+									],
+									"path": [
+										"api",
+										"consumer",
+										"123e4567-e89b-42d3-a456-556642440000",
+										"course",
+										"purchases"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "View ongoing courses",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MARKETPLACE_URI}}/api/consumer/1536c7ad-234e-44d3-b6d4-8ca655b46e2a/course/ongoing",
+									"host": [
+										"{{MARKETPLACE_URI}}"
+									],
+									"path": [
+										"api",
+										"consumer",
+										"1536c7ad-234e-44d3-b6d4-8ca655b46e2a",
+										"course",
+										"ongoing"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Record course completion",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"messageId\": \"a\",\n    \"transactionId\": \"a\",\n    \"bppId\": \"compass.bpp.course_manager\",\n    \"bppUri\": \"https://google.com\",\n    \"providerId\": \"123e4567-e89b-42d3-a456-556642440011\",\n    \"providerName\": \"a\",\n    \"providerCourseId\": \"123e4567-e89b-42d3-a456-556642440051\",\n    \"providerOrderId\": \"a\",\n    \"courseName\": \"a\",\n    \"courseLink\": \"https://www.udemy.com/course/nestjs-the-complete-developers-guide/\",\n    \"customer\": {\n        \"name\": \"Arjun Singh\",\n        \"phone\": \"+919999999999\",\n        \"email\": \"arjun.singh@example.com\"\n    },\n    \"price\": {},\n    \"status\": \"a\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{MARKETPLACE_URI}}/api/consumer/course/complete",
+									"host": [
+										"{{MARKETPLACE_URI}}"
+									],
+									"path": [
+										"api",
+										"consumer",
+										"course",
+										"complete"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Record course completion",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"messageId\": \"a\",\n    \"transactionId\": \"a\",\n    \"bppId\": \"compass.bpp.course_manager\",\n    \"bppUri\": \"https://google.com\",\n    \"providerId\": \"123e4567-e89b-42d3-a456-556642440011\",\n    \"providerName\": \"a\",\n    \"providerCourseId\": \"123e4567-e89b-42d3-a456-556642440051\",\n    \"providerOrderId\": \"a\",\n    \"courseName\": \"a\",\n    \"courseLink\": \"https://www.udemy.com/course/nestjs-the-complete-developers-guide/\",\n    \"customer\": {\n        \"name\": \"Priya Jain\",\n        \"phone\": \"+919999999999\",\n        \"email\": \"priya.jain@example.com\"\n    },\n    \"price\": {},\n    \"status\": \"a\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{MARKETPLACE_URI}}/api/consumer/course/complete",
+											"host": [
+												"{{MARKETPLACE_URI}}"
+											],
+											"path": [
+												"api",
+												"consumer",
+												"course",
+												"complete"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "174"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"ae-vhmagDhhvbB2wHqoTuN5Inoek/U\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 18 Dec 2023 13:21:59 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"statusCode\": 400,\n    \"message\": [\n        {\n            \"instancePath\": \"/competency\",\n            \"schemaPath\": \"#/properties/competency/type\",\n            \"keyword\": \"type\",\n            \"params\": {\n                \"type\": \"array\"\n            },\n            \"message\": \"must be array\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Give feedback",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"courseInfoId\": 1,\n    \"feedback\": \"Great course\",\n    \"rating\": 4\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{MARKETPLACE_URI}}/api/consumer/4d45a9e9-4a4d-4c92-aaea-7b5abbd6ff98/course/feedback",
+									"host": [
+										"{{MARKETPLACE_URI}}"
+									],
+									"path": [
+										"api",
+										"consumer",
+										"4d45a9e9-4a4d-4c92-aaea-7b5abbd6ff98",
+										"course",
+										"feedback"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Generate notificcation",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"text\": \"Course Purchased!\",\n    \"link\": \"/\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{MARKETPLACE_URI}}/api/consumer/123e4567-e89b-42d3-a456-556642440001/notifications",
+									"host": [
+										"{{MARKETPLACE_URI}}"
+									],
+									"path": [
+										"api",
+										"consumer",
+										"123e4567-e89b-42d3-a456-556642440001",
+										"notifications"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "View notifications",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MARKETPLACE_URI}}/api/consumer/4d45a9e9-4a4d-4c92-aaea-7b5abbd6ff98/notifications",
+									"host": [
+										"{{MARKETPLACE_URI}}"
+									],
+									"path": [
+										"api",
+										"consumer",
+										"4d45a9e9-4a4d-4c92-aaea-7b5abbd6ff98",
+										"notifications"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Mark notification as viewed",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{MARKETPLACE_URI}}/api/consumer/123e4567-e89b-42d3-a456-556642440000/notifications/1",
+									"host": [
+										"{{MARKETPLACE_URI}}"
+									],
+									"path": [
+										"api",
+										"consumer",
+										"123e4567-e89b-42d3-a456-556642440000",
+										"notifications",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "View remaining credits",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MARKETPLACE_URI}}/api/consumer/123e4567-e89b-42d3-a456-556642440000/wallet/credits",
+									"host": [
+										"{{MARKETPLACE_URI}}"
+									],
+									"path": [
+										"api",
+										"consumer",
+										"123e4567-e89b-42d3-a456-556642440000",
+										"wallet",
+										"credits"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "View transaction history",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MARKETPLACE_URI}}/api/consumer/123e4567-e89b-42d3-a456-556642440000/wallet/transactions",
+									"host": [
+										"{{MARKETPLACE_URI}}"
+									],
+									"path": [
+										"api",
+										"consumer",
+										"123e4567-e89b-42d3-a456-556642440000",
+										"wallet",
+										"transactions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Request Credits",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Credit request\",\n    \"description\": \"...\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{MARKETPLACE_URI}}/api/consumer/123e4567-e89b-42d3-a456-556642440000/request",
+									"host": [
+										"{{MARKETPLACE_URI}}"
+									],
+									"path": [
+										"api",
+										"consumer",
+										"123e4567-e89b-42d3-a456-556642440000",
+										"request"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get most popular courses",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MARKETPLACE_URI}}/api/consumer/course/popular?limit=10&offset=0",
+									"host": [
+										"{{MARKETPLACE_URI}}"
+									],
+									"path": [
+										"api",
+										"consumer",
+										"course",
+										"popular"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "offset",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Recommended courses",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MARKETPLACE_URI}}/api/consumer/4d45a9e9-4a4d-4c92-aaea-7b5abbd6ff98/course/recommended",
+									"host": [
+										"{{MARKETPLACE_URI}}"
+									],
+									"path": [
+										"api",
+										"consumer",
+										"4d45a9e9-4a4d-4c92-aaea-7b5abbd6ff98",
+										"course",
+										"recommended"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Wallet Service",
+			"item": [
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "Get all consumers credits",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{WALLET_SERVICE_URi}}/api/admin/19b69e7a-23c7-49fb-bea7-ed6f883b156c/credits/consumers",
+									"host": [
+										"{{WALLET_SERVICE_URi}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"19b69e7a-23c7-49fb-bea7-ed6f883b156c",
+										"credits",
+										"consumers"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get consumer credits",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{WALLET_SERVICE_URi}}/api/consumers/123e4567-e89b-42d3-a456-556642440000/credits",
+							"host": [
+								"{{WALLET_SERVICE_URi}}"
+							],
+							"path": [
+								"api",
+								"consumers",
+								"123e4567-e89b-42d3-a456-556642440000",
+								"credits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get consumer transactions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{WALLET_SERVICE_URi}}/api/consumers/123e4567-e89b-42d3-a456-556642440000/transactions",
+							"host": [
+								"{{WALLET_SERVICE_URi}}"
+							],
+							"path": [
+								"api",
+								"consumers",
+								"123e4567-e89b-42d3-a456-556642440000",
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Handle purchase",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"providerId\": \"123e4567-e89b-42d3-a456-556642440002\",\n    \"credits\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{WALLET_SERVICE_URi}}/api/consumers/123e4567-e89b-42d3-a456-556642440000/purchase",
+							"host": [
+								"{{WALLET_SERVICE_URi}}"
+							],
+							"path": [
+								"api",
+								"consumers",
+								"123e4567-e89b-42d3-a456-556642440000",
+								"purchase"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Wallet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": \"123e4567-e89b-42d3-a456-556642440000\",\n    \"type\": \"CONSUMER\",\n    \"credits\": 1000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{WALLET_SERVICE_URi}}/api/wallet/create",
+							"host": [
+								"{{WALLET_SERVICE_URi}}"
+							],
+							"path": [
+								"api",
+								"wallet",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add credits to consumer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"consumerId\": \"158636f9-941a-46af-b7b3-526cf8ad2507\",\n    \"credits\": 50\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{WALLET_SERVICE_URi}}/api/admin/ca13b7f0-d9a2-4a5b-8802-84fba1b9af4d/add-credits",
+							"host": [
+								"{{WALLET_SERVICE_URi}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"ca13b7f0-d9a2-4a5b-8802-84fba1b9af4d",
+								"add-credits"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Course Manager",
+			"item": [
+				{
+					"name": "Courses",
+					"item": [
+						{
+							"name": "Search courses",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{COURSE_MANAGER_URI}}/api/course/search?searchInput=Nest",
+									"host": [
+										"{{COURSE_MANAGER_URI}}"
+									],
+									"path": [
+										"api",
+										"course",
+										"search"
+									],
+									"query": [
+										{
+											"key": "searchInput",
+											"value": "Nest"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Fetch course",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{COURSE_MANAGER_URI}}/api/course/3",
+									"host": [
+										"{{COURSE_MANAGER_URI}}"
+									],
+									"path": [
+										"api",
+										"course",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Most popular courses",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{COURSE_MANAGER_URI}}/api/course/popular?limit=10&offset=0",
+									"host": [
+										"{{COURSE_MANAGER_URI}}"
+									],
+									"path": [
+										"api",
+										"course",
+										"popular"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "offset",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Recommended courses",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{COURSE_MANAGER_URI}}/api/course/recommended?competencies=Photoshop&competencies=API",
+									"host": [
+										"{{COURSE_MANAGER_URI}}"
+									],
+									"path": [
+										"api",
+										"course",
+										"recommended"
+									],
+									"query": [
+										{
+											"key": "competencies",
+											"value": "Photoshop"
+										},
+										{
+											"key": "competencies",
+											"value": "API"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Provider",
+					"item": [
+						{
+							"name": "Check provider registration",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"edxO21s8@gmail.in\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{COURSE_MANAGER_URI}}api/provider",
+									"host": [
+										"{{COURSE_MANAGER_URI}}api"
+									],
+									"path": [
+										"provider"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "provider-signup",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "logo",
+											"type": "file",
+											"src": "/home/sanchit/Downloads/testImage2(1)"
+										},
+										{
+											"key": "name",
+											"value": "Vijay Salgaonkar",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "vijaysalgaonkar@example.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "JHVWTBL5DfUO9bRgdt5B!",
+											"type": "text"
+										},
+										{
+											"key": "orgName",
+											"value": "Es Magico",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "+919999999999",
+											"type": "text"
+										},
+										{
+											"key": "paymentInfo",
+											"value": "{\n            \"bankAccNo\": \"1111111113\",\n            \"otherDetails\": {\n\n            }\n        }",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{COURSE_MANAGER_URI}}/api/provider/signup",
+									"host": [
+										"{{COURSE_MANAGER_URI}}"
+									],
+									"path": [
+										"api",
+										"provider",
+										"signup"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "provider-signup",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"Vijay Salgaonkar\",\n    \"email\": \"vijaysalgaonkar@example.com\",\n    \"password\": \"JHVWTBL5DfUO9bRgdt5B!\",\n    \"orgName\": \"Es Magico\",\n    \"orgLogo\": \"https://logos-world.net/wp-content/uploads/2021/11/Udemy-Logo.png\",\n    \"phone\": \"+919999999999\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{COURSE_MANAGER_URI}}/api/provider/signup",
+											"host": [
+												"{{COURSE_MANAGER_URI}}"
+											],
+											"path": [
+												"api",
+												"provider",
+												"signup"
+											]
+										}
+									},
+									"_postman_previewlanguage": "Text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"vijaysalgaonkar@gmail.com\",\n    \"password\": \"123456\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{COURSE_MANAGER_URI}}/api/provider/login",
+									"host": [
+										"{{COURSE_MANAGER_URI}}"
+									],
+									"path": [
+										"api",
+										"provider",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view provider's own profile",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{COURSE_MANAGER_URI}}/api/provider/7f039e53-c352-4b5d-82aa-5b857ed60636/profile",
+									"host": [
+										"{{COURSE_MANAGER_URI}}"
+									],
+									"path": [
+										"api",
+										"provider",
+										"7f039e53-c352-4b5d-82aa-5b857ed60636",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit/update providers own profile",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "logo",
+											"type": "file",
+											"src": "/home/sanchit/Downloads/testImage2(1)"
+										},
+										{
+											"key": "name",
+											"value": "Vijay Salgaonkar",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "vijaysalgaonkar@example.com",
+											"type": "text"
+										},
+										{
+											"key": "orgName",
+											"value": "Es Magico",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "+919999999999",
+											"type": "text"
+										},
+										{
+											"key": "paymentInfo",
+											"value": "{\n            \"bankAccNo\": \"1111111113\",\n            \"otherDetails\": {\n\n            }\n        }",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{COURSE_MANAGER_URI}}/api/provider/7f039e53-c352-4b5d-82aa-5b857ed60636/profile",
+									"host": [
+										"{{COURSE_MANAGER_URI}}"
+									],
+									"path": [
+										"api",
+										"provider",
+										"7f039e53-c352-4b5d-82aa-5b857ed60636",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Reset password",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"oldPassword\": \"123456\",\n    \"newPassword\": \"fsbbi(Y(*Y989\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{COURSE_MANAGER_URI}}/api/provider/123e4567-e89b-42d3-a456-556642440010/reset-password",
+									"host": [
+										"{{COURSE_MANAGER_URI}}"
+									],
+									"path": [
+										"api",
+										"provider",
+										"123e4567-e89b-42d3-a456-556642440010",
+										"reset-password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add course",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/home/sanchit/Downloads/testImage2(1)"
+										},
+										{
+											"key": "title",
+											"value": "Introduction to Programming",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "This course teaches you the fundamentals of programming",
+											"type": "text"
+										},
+										{
+											"key": "courseLink",
+											"value": "https://udemy.com/courses/pxUhfMd/",
+											"type": "text"
+										},
+										{
+											"key": "credits",
+											"value": "125",
+											"type": "text"
+										},
+										{
+											"key": "language[0]",
+											"value": "english",
+											"type": "text"
+										},
+										{
+											"key": "competency",
+											"value": "{\"API Development\": [\"Level1\", \"Level2\"], \"Typescript\": [\"Level1\"], \"Backend engineering\": [\"Level1\"]}",
+											"type": "text"
+										},
+										{
+											"key": "author",
+											"value": "Bhupendra Jogi",
+											"type": "text"
+										},
+										{
+											"key": "startDate",
+											"value": "2023-11-27T00:00:00",
+											"type": "text"
+										},
+										{
+											"key": "endDate",
+											"value": "2024-11-27T00:00:00",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{COURSE_MANAGER_URI}}/api/provider/123e4567-e89b-42d3-a456-556642440011/course",
+									"host": [
+										"{{COURSE_MANAGER_URI}}"
+									],
+									"path": [
+										"api",
+										"provider",
+										"123e4567-e89b-42d3-a456-556642440011",
+										"course"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Add course",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\": \"Introduction to Programming\",\n    \"description\": \"This course teaches you the fundamentals of programming\",\n    \"courseLink\": \"https://udemy.com/courses/pxUhfMd/\",\n    \"imgLink\": \"https://udemy.com/courses/pxUhfMd/images/cover1.jpg\",\n    \"credits\": 125,\n    \"noOfLessons\": 115,\n    \"language\": [\"english\", \"hindi\"],\n    \"competency\": {\n        \"12\": [\"Level1\", \"Level3\"],\n        \"18\": [\"Level1\"]\n    },\n    \"author\": \"Bhupendra Jogi\",\n    \"startDate\": \"2023-11-27T00:00:00\",\n    \"endDate\": \"2024-11-27T00:00:00\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{COURSE_MANAGER_URI}}/api/provider/838f6696-772c-46d3-91ab-457a9f479edb/course",
+											"host": [
+												"{{COURSE_MANAGER_URI}}"
+											],
+											"path": [
+												"api",
+												"provider",
+												"838f6696-772c-46d3-91ab-457a9f479edb",
+												"course"
+											]
+										}
+									},
+									"_postman_previewlanguage": "Text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "view self courses",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{COURSE_MANAGER_URI}}/api/provider/123e4567-e89b-42d3-a456-556642440011/course",
+									"host": [
+										"{{COURSE_MANAGER_URI}}"
+									],
+									"path": [
+										"api",
+										"provider",
+										"123e4567-e89b-42d3-a456-556642440011",
+										"course"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit course",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/home/sanchit/Downloads/testImage2(1)",
+											"disabled": true
+										},
+										{
+											"key": "title",
+											"value": "Compiler Engineering",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "endDate",
+											"value": "2024-11-26T00:00:00",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "competency",
+											"value": "{\"API Development\": [\"Level1\", \"Level2\"], \"Typescript\": [\"Level1\"], \"Backend engineering\": [\"Level1\"]}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{COURSE_MANAGER_URI}}/api/provider/123e4567-e89b-42d3-a456-556642440011/course/10",
+									"host": [
+										"{{COURSE_MANAGER_URI}}"
+									],
+									"path": [
+										"api",
+										"provider",
+										"123e4567-e89b-42d3-a456-556642440011",
+										"course",
+										"10"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Edit course",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\": \"Compiler Engineering\",\n    // \"startDate\": \"2023-11-27T00:00:00\",\n    \"endDate\": \"2024-11-26T00:00:00\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{COURSE_MANAGER_URI}}/api/provider/838f6696-772c-46d3-91ab-457a9f479edb/course/10",
+											"host": [
+												"{{COURSE_MANAGER_URI}}"
+											],
+											"path": [
+												"api",
+												"provider",
+												"838f6696-772c-46d3-91ab-457a9f479edb",
+												"course",
+												"10"
+											]
+										}
+									},
+									"_postman_previewlanguage": "Text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "remove providers' course",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{COURSE_MANAGER_URI}}/api/provider/{providerId}/course/{courseId}",
+									"host": [
+										"{{COURSE_MANAGER_URI}}"
+									],
+									"path": [
+										"api",
+										"provider",
+										"{providerId}",
+										"course",
+										"{courseId}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "archive course",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"status\": \"ARCHIVED\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{COURSE_MANAGER_URI}}/api/provider/ca13b7f0-d9a2-4a5b-8802-84fba1b9af4d/course/4/status",
+									"host": [
+										"{{COURSE_MANAGER_URI}}"
+									],
+									"path": [
+										"api",
+										"provider",
+										"ca13b7f0-d9a2-4a5b-8802-84fba1b9af4d",
+										"course",
+										"4",
+										"status"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Unarchive course",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"status\": \"UNARCHIVED\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{COURSE_MANAGER_URI}}/api/provider/ca13b7f0-d9a2-4a5b-8802-84fba1b9af4d/course/4/status",
+									"host": [
+										"{{COURSE_MANAGER_URI}}"
+									],
+									"path": [
+										"api",
+										"provider",
+										"ca13b7f0-d9a2-4a5b-8802-84fba1b9af4d",
+										"course",
+										"4",
+										"status"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "View course feedback, ratings & number of purchases",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{COURSE_MANAGER_URI}}/api/provider/838f6696-772c-46d3-91ab-457a9f479edb/course/2/feedback",
+									"host": [
+										"{{COURSE_MANAGER_URI}}"
+									],
+									"path": [
+										"api",
+										"provider",
+										"838f6696-772c-46d3-91ab-457a9f479edb",
+										"course",
+										"2",
+										"feedback"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get course transactions",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{COURSE_MANAGER_URI}}/api/provider/838f6696-772c-46d3-91ab-457a9f479edb/course/transactions",
+									"host": [
+										"{{COURSE_MANAGER_URI}}"
+									],
+									"path": [
+										"api",
+										"provider",
+										"838f6696-772c-46d3-91ab-457a9f479edb",
+										"course",
+										"transactions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "mark course complete",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"courseId\": \"123e4567-e89b-42d3-a456-556642440051\",\n    \"userId\": \"0f5d0b13-8d72-46c9-a7c4-c1f7e5aa1f17\",\n    \"courseCompletionScore\": 50\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{COURSE_MANAGER_URI}}/api/provider/123e4567-e89b-42d3-a456-556642440011/course/completion",
+									"host": [
+										"{{COURSE_MANAGER_URI}}"
+									],
+									"path": [
+										"api",
+										"provider",
+										"123e4567-e89b-42d3-a456-556642440011",
+										"course",
+										"completion"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "Sign up",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/home/sanchit/Downloads/testImage2(1)",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "admin2",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "admin2@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "JHVWTBL5DfUO9bRgdt5B!",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{COURSE_MANAGER_URI}}/api/admin/signup",
+									"host": [
+										"{{COURSE_MANAGER_URI}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"signup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"sanchit@example.com\",\n    \"password\": \"asdfghjkl\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{COURSE_MANAGER_URI}}/api/admin/login",
+									"host": [
+										"{{COURSE_MANAGER_URI}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "View all providers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{COURSE_MANAGER_URI}}/api/admin/providers",
+									"host": [
+										"{{COURSE_MANAGER_URI}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"providers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "admin view provider profile",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{COURSE_MANAGER_URI}}/api/admin/providers/{providerId}",
+									"host": [
+										"{{COURSE_MANAGER_URI}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"providers",
+										"{providerId}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "admin edit provider profile",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"updatedProvName\",\n    \"email\": \"test123@gmail.com\",\n    \"password\": \"12345678\",\n    \"walletId\": 1,\n    \"paymentInfo\": {\n\n    },\n    \"status\": \"rejected\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{COURSE_MANAGER_URI}}/api/admin/providers/{providerId}/",
+									"host": [
+										"{{COURSE_MANAGER_URI}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"providers",
+										"{providerId}",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "verify provider account",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{COURSE_MANAGER_URI}}/api/admin/providers/ca13b7f0-d9a2-4a5b-8802-84fba1b9af4d/verify",
+									"host": [
+										"{{COURSE_MANAGER_URI}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"providers",
+										"ca13b7f0-d9a2-4a5b-8802-84fba1b9af4d",
+										"verify"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Reject provider",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"rejectionReason\": \"abc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{COURSE_MANAGER_URI}}/api/admin/providers/ca13b7f0-d9a2-4a5b-8802-84fba1b9af4d/reject",
+									"host": [
+										"{{COURSE_MANAGER_URI}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"providers",
+										"ca13b7f0-d9a2-4a5b-8802-84fba1b9af4d",
+										"reject"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "accept course",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{COURSE_MANAGER_URI}}/api/admin/courses/3/accept",
+									"host": [
+										"{{COURSE_MANAGER_URI}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"courses",
+										"3",
+										"accept"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "reject course",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{COURSE_MANAGER_URI}}/api/admin/courses/{courseId}/reject",
+									"host": [
+										"{{COURSE_MANAGER_URI}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"courses",
+										"{courseId}",
+										"reject"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all courses",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{COURSE_MANAGER_URI}}/api/admin/courses/",
+									"host": [
+										"{{COURSE_MANAGER_URI}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"courses",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Admin-consumer transactions",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{COURSE_MANAGER_URI}}/api/admin/{adminId}/transactions/consumers",
+									"host": [
+										"{{COURSE_MANAGER_URI}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"{adminId}",
+										"transactions",
+										"consumers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Admin add credits",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"providerId\": \"158636f9-941a-46af-b7b3-526cf8ad2507\",\n    \"credits\": 10\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{COURSE_MANAGER_URI}}/api/admin/{adminId}/providers/credits/addCredits",
+									"host": [
+										"{{COURSE_MANAGER_URI}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"{adminId}",
+										"providers",
+										"credits",
+										"addCredits"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Admin reduce credits",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"providerId\": 1,\n    \"credits\": -10\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{COURSE_MANAGER_URI}}/api/admin/{adminId}/providers/credits/reduceCredits",
+									"host": [
+										"{{COURSE_MANAGER_URI}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"{adminId}",
+										"providers",
+										"credits",
+										"reduceCredits"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get providers for settlement",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{COURSE_MANAGER_URI}}/api/admin/123e4567-e89b-42d3-a456-556642440020/providers/settlements",
+									"host": [
+										"{{COURSE_MANAGER_URI}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"123e4567-e89b-42d3-a456-556642440020",
+										"providers",
+										"settlements"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Settle credits of provider",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": \"4f69f68d-59f6-496b-9a7d-09fc4ba61cf6\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{COURSE_MANAGER_URI}}/api/admin/25219c93-2149-4b06-8966-305434ca8b72/providers/settlements",
+									"host": [
+										"{{COURSE_MANAGER_URI}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"25219c93-2149-4b06-8966-305434ca8b72",
+										"providers",
+										"settlements"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "MARKETPLACE_URI",
+			"value": "http://localhost:4000",
+			"type": "string"
+		},
+		{
+			"key": "COURSE_MANAGER_URI",
+			"value": "http://localhost:3000",
+			"type": "string"
+		},
+		{
+			"key": "WALLET_SERVICE_URi",
+			"value": "http://localhost:4002",
+			"type": "string"
+		},
+		{
+			"key": "COURSE_MANAGER_PROD",
+			"value": "https://course.manager.compass.io",
+			"type": "string"
+		}
+	]
+}
